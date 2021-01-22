@@ -1,0 +1,16 @@
+@import '../Vars.scss';
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+
+    p {
+        font-size: 130%;
+        text-decoration: underline;
+        cursor: pointer;
+        padding: 2vw;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@import '../Vars.scss';
+
+.logo-box {
+    margin: 2vw;
+    margin-top: 0;
+
+    .tilt {
+        width: 150px;
+        height: 150px;
+        border: solid 2px $accent2;
+        box-shadow: 0 0 8px $accent2;
+        background: linear-gradient( to bottom, rgba(23, 24, 24, 0.7) 0%, rgba(0, 0, 0, 0.15) 100%);
+
+        .logo-svg {
+            padding-top: 40px;
+            fill: $accent2;
+        }
+    }
+}
