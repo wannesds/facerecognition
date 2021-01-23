@@ -1,0 +1,23 @@
+@import '../Vars.scss';
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+
+    p {
+        font-size: 140%;
+        text-decoration: underline;
+        cursor: pointer;
+        padding: 10px;
+        color: $accent;
+        background: linear-gradient( to bottom, rgba(23, 24, 24, 0.7) 0%, rgba(0, 0, 0, 0.15) 100%);
+        border: solid 2px $accent;
+        box-shadow: 0 0px 8px $accent;
+        border-radius: 15px;
+        &:hover {
+            color: $accent2;
+            background: linear-gradient( to bottom, rgba(23, 24, 24, 0.7) 0%, rgba(0, 0, 0, 0.25) 100%);
+
+        }
+    }
+}
