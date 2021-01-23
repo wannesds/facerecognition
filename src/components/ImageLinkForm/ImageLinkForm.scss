@@ -1,11 +1,19 @@
 @import '../Vars.scss';
 
 .form-box {
-    width: 100%;
+    width: auto;
+    padding: 0 2%;
 
     p {
         font-size: 150%;
-        color: $black;
+        color: $accent2;
+        font-weight: 300;
+    }
+
+    .form-input {
+     
+        display: flex;
+        justify-content: center;
     }
 
     input {
@@ -19,20 +27,20 @@
     }
 
     button {
-        width: 27%;
+        width: 30%;
         cursor: pointer;
         font-size: 130%;
         padding: 5px;
         background: linear-gradient( to bottom, rgba(23, 24, 24, 0.7) 0%, rgba(0, 0, 0, 0.15) 100%);
         border: solid 2px $accent;
-        box-shadow: 0 0px 15px $accent2;
+        //box-shadow: 0 0px 15px $accent2;
 
         
         color: $accent;
         &:hover {
             color: $accent2;
+            border-color: $accent2;
             background: linear-gradient( to bottom, rgba(24, 26, 26, 0.7) 0%, rgba(0, 0, 0, 0.25) 100%);
-
         }
     }
 }

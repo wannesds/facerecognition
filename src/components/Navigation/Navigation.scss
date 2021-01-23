@@ -2,7 +2,10 @@
 
 nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 10px $black;
+    padding: 5px 2%;
 
     p {
         font-size: 140%;
@@ -12,12 +15,11 @@ nav {
         color: $accent;
         background: linear-gradient( to bottom, rgba(23, 24, 24, 0.7) 0%, rgba(0, 0, 0, 0.15) 100%);
         border: solid 2px $accent;
-        box-shadow: 0 0px 8px $accent;
         border-radius: 15px;
         &:hover {
             color: $accent2;
             background: linear-gradient( to bottom, rgba(23, 24, 24, 0.7) 0%, rgba(0, 0, 0, 0.25) 100%);
-
+            border-color: $accent2;
         }
     }
 }

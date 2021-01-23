@@ -1,0 +1,20 @@
+@import '../Vars.scss';
+
+.rank-box {
+    //border: solid 1px $accent2;
+    width: 35%;
+    margin: 40px auto;
+    padding: 10px;
+    //box-shadow: 0 0px 10px $accent;
+    
+
+    .rank-text {
+        font-size: 140%;
+        color: $accent;
+    }
+    .rank-num {
+        font-size: 200%;
+        color: $accent;
+        text-shadow: 0 0 3px $accent;
+    }
+}

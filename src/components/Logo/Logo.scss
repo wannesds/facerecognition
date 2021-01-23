@@ -1,11 +1,11 @@
 @import '../Vars.scss';
 
 .logo-box {
-    margin-top: 0;
+   
 
     .tilt {
-        width: 150px;
-        height: 150px;
+        width: 80px;
+        height: 80px;
         border: solid 2px $accent;
         box-shadow: 0 0 8px $accent;
         background: linear-gradient( to bottom, rgba(23, 24, 24, 0.7) 0%, rgba(0, 0, 0, 0.15) 100%);

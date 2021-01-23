@@ -8,7 +8,7 @@ import './ImageLinkForm.scss';
             <p>
                 {'Detect faces in your pictures.'}
             </p>
-            <div>
+            <div className="form-input">
                 <input type='text'/>
                 <button>Scan</button>
             </div>
