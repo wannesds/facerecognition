@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './ImageLinkForm.scss';
-//.predict('c0c0ac362b03416da06ab3fa36fb58e3', this.state.input)
 
 function ImageLinkForm({ onInputChange, onBtnSubmit }) {
     

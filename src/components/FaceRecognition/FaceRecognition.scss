@@ -1,0 +1,13 @@
+@import '../Vars.scss';
+
+.facerecognition-box {
+    margin-top: 50px;
+    
+    img {
+        width: 500px;
+        height: auto;
+    }
+    p {
+        color: $black;
+    }
+}
