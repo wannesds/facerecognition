@@ -1,13 +1,29 @@
 @import '../Vars.scss';
 
 .facerecognition-box {
-    margin-top: 50px;
-    
-    img {
-        width: 500px;
-        height: auto;
-    }
-    p {
-        color: $black;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+    .image-box {
+        position: absolute;
+
+        img {
+            width: 500px;
+            height: auto;
+        }
+        p {
+            color: $black;
+        }
+
+        .bounding-box {
+            position: absolute;
+            box-shadow: 0 0 10px $accent inset;
+            border: solid 2px $accent;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            cursor: pointer;
+        }
     }
 }
