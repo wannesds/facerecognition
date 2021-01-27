@@ -2,7 +2,7 @@ import React from 'react';
 import './Navigation.scss';
 import Logo from '../Logo/Logo';
 
-const Navigation = ({route}) => {
+const Navigation = ({route, onRouteChange}) => {
     return(
         <nav>
             <Logo/>
@@ -10,7 +10,7 @@ const Navigation = ({route}) => {
                 route === 'signin' ?
                  false 
                     :
-                 <p>Sign Out</p>
+                 <p onClick={() => onRouteChange('signin')}>Sign Out</p>
             }
         </nav>
     );

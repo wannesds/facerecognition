@@ -52,13 +52,13 @@ function App() {
      
   }
 
-  const onRouteChange = () => {
-    setRoute('home');
+  const onRouteChange = (route) => {
+    setRoute(route);
   }
   
   return (
     <div className="App">
-      <Navigation route={route}/>
+      <Navigation route={route} onRouteChange={onRouteChange}/>
       {
         route === 'signin' ?
           <Signin onRouteChange={onRouteChange}/> 
