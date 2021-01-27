@@ -9,6 +9,7 @@
     padding: 10px;
     padding-bottom: 10px;
     box-shadow: 0 2px 8px $black;
+    border-radius: 15px;
 
     form {
 
@@ -35,6 +36,7 @@
                 width: 100%;
                 color: $accent2;
                 border: solid 2px $grey-blue;
+                border-radius: 10px;
             }
             label {
                 font-size: 80%;
