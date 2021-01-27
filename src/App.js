@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import './App.scss';
+
 import Clarifai from 'clarifai';
+
 import Navigation from './components/Navigation/Navigation';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Rank from './components/Rank/Rank';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
+import Signin from './components/Signin/Signin';
 
 function App() {
   const app = new Clarifai.App({
@@ -51,6 +54,7 @@ function App() {
   return (
     <div className="App">
       <Navigation/>
+      <Signin/>
       <Rank/>
       <ImageLinkForm onInputChange={onInputChange} onBtnSubmit={onBtnSubmit}/>
       <FaceRecognition box={box} imageUrl={imageUrl}/>

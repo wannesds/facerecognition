@@ -1,0 +1,53 @@
+@import '../Vars.scss';
+
+.signin-box {
+    width: 300px;
+    height: auto;
+    margin: 0 auto;
+    background: $gradient-black;
+    font-size: 120%;
+    padding: 10px;
+    padding-bottom: 10px;
+    //border: solid 2px $accent;
+    box-shadow: 0 0 5px black;
+
+    form {
+
+        a {
+            color: $accent;
+            font-size: 90%;
+            &:hover {
+                color:$accent2;
+            }
+        }
+
+        fieldset {
+            //background-color: rgba(0, 0, 255, 0.486);
+            border: solid 2px $grey;
+
+            legend {
+                color: $accent;
+            }
+            input {
+                padding: 3px;
+                margin: 10px auto;
+                background: $gradient-black;
+                width: 100%;
+                color: $accent2;
+                border: solid 2px $grey-blue;
+            }
+            label {
+                font-size: 80%;
+                color: $accent2;
+                width: 100%;
+            }
+            button {
+                @include default-btn;
+                font-size: 110%;
+            }
+        }
+    }
+
+
+
+}

@@ -6,12 +6,15 @@ import './Signin.scss';
      return(
         <div className="signin-box">
             <form>
-                <legend>Sign In</legend>
-                <label>Email</label>
-                <input></input>
-
-                <label>Password</label>
-                <input></input>
+                <fieldset id="sign_up">
+                    <legend>Sign In</legend>
+                    <label for="email">Email</label>
+                    <input type="email" name="email"></input>
+                    <label for="password">Password</label>
+                    <input type="password" name="password"></input>
+                    <button type="submit">Sign In</button>
+                </fieldset>
+                <a href="#0">Sign up</a>
             </form>
         </div>
      );

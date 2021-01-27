@@ -3,11 +3,30 @@
 $font-sand : 'Quicksand' ; 
 
 $accent : #3fafa6;
-$accent2 :  #389991;
+$accent2 :  #379189;
 
 $black : rgb(23, 24, 24);
 $black-l : #1f2122;
 
-$grey : #303638;
-$grey-blue : #47565c;
+$grey : #282f31;
+$grey-blue : #2d4349;
 
+$gradient-black : linear-gradient( to bottom, rgb(27, 36, 36) 0%, rgba(0, 0, 0, 0.15) 100%);
+$gradient-accent : linear-gradient(to right, $accent 0%, $accent2 100%);
+$gradient-grey : linear-gradient(50deg, $grey 0%, $grey-blue 100%);
+
+@mixin default-btn {
+    border: solid 2px $accent;
+    border-radius: 15px;
+    background: $gradient-accent;
+    color: black;
+    //box-shadow: 0 0 4px $accent;
+    padding: 5px 10px;
+
+    &:hover {
+        color: $accent;
+        cursor: pointer;
+        background: $gradient-black;
+        box-shadow: none;
+    }
+}

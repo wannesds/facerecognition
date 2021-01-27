@@ -12,7 +12,6 @@
     }
 
     .form-input {
-     
         display: flex;
         justify-content: center;
     }
@@ -21,31 +20,19 @@
         width: 70%;
         padding: 5px;
         //margin: 0 auto;
+        color: $accent2;
         font-size: 130%;
-        background :linear-gradient( to bottom, rgba(34, 36, 36, 0.7) 0%, rgba(0, 0, 0, 0.15) 100%);
+        border: solid 2px $grey-blue;
+        background : $gradient-black;
         //border: solid 2px $accent;
         //box-shadow: 0 0 8px $accent;
     }
 
     button {
-        width: 30%;
-        cursor: pointer;
-        font-size: 130%;
-        padding: 5px;
-        background: linear-gradient( to bottom, rgba(23, 24, 24, 0.7) 0%, rgba(0, 0, 0, 0.15) 100%);
-        border: solid 2px $accent;
-        //box-shadow: 0 0px 15px $accent2;
-
-        color: $accent;
-        &:hover {
-            color: $accent2;
-            border-color: $accent2;
-            background: linear-gradient( to bottom, rgba(24, 26, 26, 0.7) 0%, rgba(0, 0, 0, 0.25) 100%);
-        }
-    }
-
-    input:focus, button:focus {
-        outline: none;
+        width: 100px;
+        @include default-btn;
+        font-size: 140%;
+        margin-left: 10px;
     }
 }
 
