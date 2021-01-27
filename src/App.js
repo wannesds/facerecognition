@@ -50,14 +50,14 @@ function App() {
       },
       "particles": {
         "color": {
-          "value": "transparent"
+          "value": "#1f2122"
         },
         "links": {
           "color": {
             "value": "#2de4d5"
           },
           "distance": 10,
-          "enable": true,
+          "enable": false,
           "opacity": 0.4,
           "triangles": {
             "enable": true
@@ -139,7 +139,6 @@ function App() {
         },
         "twinkle": {
           "lines": {
-            "frequency": 0.005,
             "color": {
               "value": "#ff0000"
             }
