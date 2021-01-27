@@ -1,7 +1,6 @@
 @import '../Vars.scss';
 
 nav {
-    margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,7 +8,7 @@ nav {
     padding: 7px 2%;
     background-color: rgba(0, 0, 0, 0.3);
 
-    p {
+    a {
         @include default-btn;
         font-size: 130%;
     }

@@ -10,7 +10,7 @@ const Navigation = ({route, onRouteChange}) => {
                 route === 'signin' ?
                  false 
                     :
-                 <p onClick={() => onRouteChange('signin')}>Sign Out</p>
+                 <a onClick={() => onRouteChange('signin')}>Sign Out</a>
             }
         </nav>
     );

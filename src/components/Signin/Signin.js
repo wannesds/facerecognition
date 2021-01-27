@@ -16,7 +16,7 @@ import './Signin.scss';
                     <input type="password" name="password"></input>
                     <input className="button" onClick={() => onRouteChange('home')} type="submit" value="Sign in"></input>
                 </fieldset>
-                <a href="#0">Sign up</a>
+                {/* <a href="#0">Sign up</a> */}
             </form>
         </div>
      );
