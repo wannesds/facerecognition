@@ -10,7 +10,7 @@ function ImageLinkForm({ onInputChange, onBtnSubmit }) {
                 {'Detect faces in your pictures.'}
             </p>
             <div className="form-input">
-                <input type='text' onChange={onInputChange}/>
+                <input className='input-form' type='text' onChange={onInputChange}/>
                 <button onClick={onBtnSubmit}>Scan</button>
             </div>
         </div>

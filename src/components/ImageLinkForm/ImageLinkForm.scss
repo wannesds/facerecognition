@@ -36,7 +36,6 @@
         border: solid 2px $accent;
         //box-shadow: 0 0px 15px $accent2;
 
-        
         color: $accent;
         &:hover {
             color: $accent2;
@@ -44,4 +43,15 @@
             background: linear-gradient( to bottom, rgba(24, 26, 26, 0.7) 0%, rgba(0, 0, 0, 0.25) 100%);
         }
     }
+
+    input:focus, button:focus {
+        outline: none;
+    }
 }
+
+// textarea, input.text, input[type="text"], input[type="button"], input[type="submit"], .input-form {
+//     -webkit-appearance: none;
+//     -o-appearance: none;
+//     appearance: none;
+//     border-radius: 0;
+//   }
