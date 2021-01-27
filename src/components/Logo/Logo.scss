@@ -7,7 +7,10 @@
         width: 80px;
         height: 80px;
         background: $gradient-accent;
+        border: solid 2px $accent;
         border-radius: 15px;
+        box-shadow: 0 1px 8px $black;
+
 
         .logo-svg {
             padding-top: 40px;

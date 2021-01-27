@@ -2,8 +2,8 @@
 
 $font-sand : 'Quicksand' ; 
 
-$accent : #3fafa6;
-$accent2 :  #379189;
+$accent : #3db6ac;
+$accent2 :  #358d86;
 
 $black : rgb(23, 24, 24);
 $black-l : #1f2122;
@@ -22,11 +22,12 @@ $gradient-grey : linear-gradient(50deg, $grey 0%, $grey-blue 100%);
     color: black;
     //box-shadow: 0 0 4px $accent;
     padding: 5px 10px;
+    box-shadow: 0 1px 8px $black;
 
     &:hover {
-        color: $accent;
         cursor: pointer;
-        background: $gradient-black;
-        box-shadow: none;
+        color: $black;
+        box-shadow: inset 0 0 3px $accent2;
+        border-color: $accent2;
     }
 }
