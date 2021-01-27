@@ -17,6 +17,7 @@ function App() {
   const [input, setInput] = useState('');
   const [imageUrl, setImageUrl] = useState('');
   const [box, setBox] = useState({});
+  const [route, setRoute] = useState('signin');
 
   const calculateFaceLocation = (data) => {
     const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
@@ -50,14 +51,24 @@ function App() {
       .catch(err => console.log(err));
      
   }
+
+  const onRouteChange = () => {
+    setRoute('home');
+  }
   
   return (
     <div className="App">
-      <Navigation/>
-      <Signin/>
-      <Rank/>
-      <ImageLinkForm onInputChange={onInputChange} onBtnSubmit={onBtnSubmit}/>
-      <FaceRecognition box={box} imageUrl={imageUrl}/>
+      <Navigation route={route}/>
+      {
+        route === 'signin' ?
+          <Signin onRouteChange={onRouteChange}/> 
+            :
+          <section>
+            <Rank/>
+            <ImageLinkForm onInputChange={onInputChange} onBtnSubmit={onBtnSubmit}/>
+            <FaceRecognition box={box} imageUrl={imageUrl}/>
+          </section>
+      }
     </div>
   );
 }

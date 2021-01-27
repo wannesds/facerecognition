@@ -2,7 +2,7 @@ import React from 'react';
 import './Signin.scss';
 
 
- const Signin = () => {
+ const Signin = ({onRouteChange}) => {
      return(
         <div className="signin-box">
             <form>
@@ -12,7 +12,7 @@ import './Signin.scss';
                     <input type="email" name="email"></input>
                     <label for="password">Password</label>
                     <input type="password" name="password"></input>
-                    <button type="submit">Sign In</button>
+                    <input className="button" onClick={onRouteChange} type="submit" value="Sign in"></input>
                 </fieldset>
                 <a href="#0">Sign up</a>
             </form>

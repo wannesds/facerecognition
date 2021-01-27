@@ -2,11 +2,16 @@ import React from 'react';
 import './Navigation.scss';
 import Logo from '../Logo/Logo';
 
-const Navigation = () => {
+const Navigation = ({route}) => {
     return(
         <nav>
             <Logo/>
-            <p>Sign Out</p>
+            {
+                route === 'signin' ?
+                 false 
+                    :
+                 <p>Sign Out</p>
+            }
         </nav>
     );
 }
