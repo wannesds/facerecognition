@@ -3,21 +3,23 @@
 .signin-box {
     width: 300px;
     height: auto;
-    margin:50px auto;
+    margin: 50px auto;
     background: $gradient-black;
     font-size: 120%;
     padding: 10px;
-    padding-bottom: 0;
     box-shadow: 0 2px 8px $black;
     border-radius: 15px;
 
-    form {
+    .form {
 
-        a {
-            color: $accent;
+        p {
+            color: $accent2;
             font-size: 90%;
+            text-decoration: underline;
+            margin: 0 auto;
             &:hover {
-                color:$accent2;
+                opacity: 0.8;
+                cursor: pointer;
             }
         }
 
@@ -30,13 +32,9 @@
                 padding: 0 10px; 
             }
             input {
-                padding: 3px;
+                @include default-input;
                 margin: 10px auto;
-                background: $gradient-black;
-                width: 100%;
-                color: $accent2;
-                border: solid 2px $grey-blue;
-                border-radius: 10px;
+                margin-bottom: 20px;
             }
             label {
                 font-size: 80%;

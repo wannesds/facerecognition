@@ -33,9 +33,8 @@ $gradient-grey : linear-gradient(50deg, $grey 0%, $grey-blue 100%);
     border: solid 2px $accent;
     border-radius: 15px;
     background: $gradient-accent;
-    color: black;
-    //box-shadow: 0 0 4px $accent;
-    padding: 5px 10px;
+    color: $black;
+    padding: 5px;
     box-shadow: 0 1px 8px $black;
     font-family: $font-tech;
 
@@ -45,4 +44,16 @@ $gradient-grey : linear-gradient(50deg, $grey 0%, $grey-blue 100%);
         box-shadow: inset 0 0 3px $accent2;
         border-color: $accent2;
     }
+}
+
+@mixin default-input {
+    width: 90%;
+    background: $gradient-black;
+    padding: 5px;
+    padding-left: 10px;
+    background: $gradient-black;
+    color: $accent;
+    border: solid 2px $grey-blue;
+    box-shadow: 0 2px 8px $black;
+    border-radius: 15px;
 }

@@ -1,15 +1,22 @@
 @import '../Vars.scss';
 
-nav {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 5px 10px $black;
-    padding: 7px 2%;
+    padding: 10px 2%;
     background-color: rgba(0, 0, 0, 0.3);
 
-    a {
-        @include default-btn;
-        font-size: 130%;
+    nav {
+        display: flex;
+
+        p {
+            @include default-btn;
+            margin: 10px;
+            width: auto;
+            font-size: 130%;
+            text-decoration: underline;
+        }
     }
 }

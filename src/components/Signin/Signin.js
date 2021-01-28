@@ -5,19 +5,17 @@ import './Signin.scss';
  const Signin = ({onRouteChange}) => {
      return(
         <div className="signin-box">
-            <form>
-                <fieldset id="sign_up">
+            <div className="form">
+                <fieldset id="sign_in">
                     <legend>Sign In</legend>
-                    <label for="name">Name</label>
-                    <input type="text" name="name"></input>
-                    <label for="email">Email</label>
+                    <label htmlfor="email">Email</label>
                     <input type="email" name="email"></input>
-                    <label for="password">Password</label>
+                    <label htmlfor="password">Password</label>
                     <input type="password" name="password"></input>
                     <input className="button" onClick={() => onRouteChange('home')} type="submit" value="Sign in"></input>
+                    <p onClick={() => onRouteChange('register')}>Register</p>
                 </fieldset>
-                {/* <a href="#0">Sign up</a> */}
-            </form>
+            </div>
         </div>
      );
  }

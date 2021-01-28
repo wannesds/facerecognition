@@ -2,17 +2,20 @@ import React from 'react';
 import './Navigation.scss';
 import Logo from '../Logo/Logo';
 
-const Navigation = ({route, onRouteChange}) => {
+const Navigation = ({isSignedIn, onRouteChange}) => {
     return(
-        <nav>
+        <header>
             <Logo/>
-            {
-                route === 'signin' ?
-                 false 
-                    :
-                 <a onClick={() => onRouteChange('signin')}>Sign Out</a>
+            { isSignedIn === true
+                ? <nav className="nav-Loggedin">
+                    <p onClick={() => onRouteChange('signout')}>Sign Out</p>
+                  </nav>
+                : <nav className="nav-loggedout">
+                    <p onClick={() => onRouteChange('signin')}>Sign In</p>
+                    <p onClick={() => onRouteChange('register')}>Register</p>
+                  </nav>
             }
-        </nav>
+        </header>
     );
 }
 

@@ -9,6 +9,7 @@ import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Rank from './components/Rank/Rank';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import Signin from './components/Signin/Signin';
+import Register from './components/Register/Register';
 
 function App() {
 
@@ -77,7 +78,7 @@ function App() {
             "right": "out",
             "top": "out"
           },
-          "speed": 10
+          "speed": 5
         },
         "number": {
           "density": {
@@ -161,6 +162,7 @@ function App() {
   const [imageUrl, setImageUrl] = useState('');
   const [box, setBox] = useState({});
   const [route, setRoute] = useState('signin');
+  const [isSignedIn, setIsSignedIn] = useState(false);
 
   const calculateFaceLocation = (data) => {
     const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
@@ -197,11 +199,18 @@ function App() {
 
   const onRouteChange = (route) => {
     setRoute(route);
+
+    if(route === 'signout') {
+      setIsSignedIn(false);
+    } else if(route === 'home') {
+      setIsSignedIn(true);
+    }
+
   }
   
   return (
     <div className="App">
-      <Navigation route={route} onRouteChange={onRouteChange}/>
+      <Navigation isSignedIn={isSignedIn} onRouteChange={onRouteChange}/>
       <Particles 
         className="particles"
         width="100vw"
@@ -209,15 +218,20 @@ function App() {
         canvasClassName="App"
         params={particlesParams}
       />
-      {
-        route === 'signin' ?
-          <Signin onRouteChange={onRouteChange}/> 
-            :
-          <section>
+      { route === 'home' 
+        ? <section>
             <Rank/>
             <ImageLinkForm onInputChange={onInputChange} onBtnSubmit={onBtnSubmit}/>
             <FaceRecognition box={box} imageUrl={imageUrl}/>
           </section>
+        :  (
+          route === 'signin'
+            ? <Signin onRouteChange={onRouteChange}/> 
+            : <Register onRouteChange={onRouteChange}/>
+        )
+          
+        
+
       }
     </div>
   );

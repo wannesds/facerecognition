@@ -16,22 +16,14 @@
     }
 
     input {
+        @include default-input;
         width: 70%;
-        padding: 5px;
-        //margin: 0 auto;
-        color: $accent2;
         font-size: 130%;
-        border: solid 2px $grey-blue;
-        background : $gradient-black;
-        box-shadow: 0 2px 8px $black;
-        border-radius: 15px;
-        //border: solid 2px $accent;
-        //box-shadow: 0 0 8px $accent;
     }
 
     button {
-        width: 100px;
         @include default-btn;
+        width: 100px;
         font-size: 140%;
         margin-left: 10px;
     }
