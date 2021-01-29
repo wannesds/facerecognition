@@ -24,19 +24,36 @@ function App() {
   const [box, setBox] = useState({});
   const [route, setRoute] = useState('signin');
   const [isSignedIn, setIsSignedIn] = useState(false);
+  const [user, setUser] = useState({
+    id: '',
+    name: '',
+    email: '',
+    entries: 0,
+    joined: ''
+  });
 
   const [data, setData] = useState({});
 
-  useEffect(() => {
-    const fetchData = async () => {
-      fetch('http://localhost:3000')
-      .then(response => response.json())
-      .then(res => setData(res))
-    }
-    fetchData()
-  },[])
+  // useEffect(() => {
+  //   const fetchData = () => {
+  //     fetch('http://localhost:3000')
+  //     .then(response => response.json())
+  //     .then(res => setData(res))
+  //   }
+  //   fetchData()
+  // },[])
 
-  console.log('data after useeffect', data);
+  //console.log('data after useeffect', data);
+
+  const loadUser = (data) => {
+    setUser({
+      id: data.id,
+      name: data.name,
+      email: data.email,
+      entries: data.entries,
+      joined: data.joined
+    });
+  }
 
   const calculateFaceLocation = (data) => {
     const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
@@ -101,7 +118,7 @@ function App() {
         :  (
           route === 'signin'
             ? <Signin onRouteChange={onRouteChange}/> 
-            : <Register onRouteChange={onRouteChange}/>
+            : <Register onRouteChange={onRouteChange} loadUser={loadUser}/>
         )
           
         
