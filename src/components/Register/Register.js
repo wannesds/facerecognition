@@ -8,11 +8,11 @@ import '../Signin/Signin.scss'; //bcs same styles
             <div className="form">
                 <fieldset id="register">
                     <legend>Register</legend>
-                    <label htmlfor="name">Name</label>
+                    <label htmlFor="name">Name</label>
                     <input type="text" name="name"></input>
-                    <label htmlfor="email" >Email</label>
+                    <label htmlFor="email" >Email</label>
                     <input type="email" name="email"></input>
-                    <label htmlfor="password">Password</label>
+                    <label htmlFor="password">Password</label>
                     <input type="password" name="password"></input>
                     <input className="button" onClick={() => onRouteChange('home')} type="submit" value="Register"></input>
                 </fieldset>
