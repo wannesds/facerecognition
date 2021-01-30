@@ -2,7 +2,7 @@ import React, { useState, } from 'react';
 import './Signin.scss';
 
 
-function Signin({onRouteChange}) {
+function Signin({onRouteChange, loadUser}) {
 
     const [signInPass, setSignInPass] = useState('');
     const [signInEmail, setSignInEmail] = useState('');
@@ -25,10 +25,11 @@ function Signin({onRouteChange}) {
             })
         })
         .then(response => response.json())
-        .then(data => {
-            if(data === 'succes') {
-                onRouteChange('home')
-            }
+        .then(user => {
+            if(user.id) {
+                loadUser(user);
+                onRouteChange('home'); 
+            }          
         })   
     }
 

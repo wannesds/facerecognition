@@ -45,6 +45,10 @@ function App() {
 
   //console.log('data after useeffect', data);
 
+  // useEffect(() => {
+    
+  // }, [user])
+
   const loadUser = (data) => {
     setUser({
       id: data.id,
@@ -111,13 +115,13 @@ function App() {
       />
       { route === 'home' 
         ? <section>
-            <Rank/>
+            <Rank name={user.name} entries={user.entries}/>
             <ImageLinkForm onInputChange={onInputChange} onBtnSubmit={onBtnSubmit}/>
             <FaceRecognition box={box} imageUrl={imageUrl}/>
           </section>
         :  (
           route === 'signin'
-            ? <Signin onRouteChange={onRouteChange}/> 
+            ? <Signin onRouteChange={onRouteChange} loadUser={loadUser}/> 
             : <Register onRouteChange={onRouteChange} loadUser={loadUser}/>
         )
           

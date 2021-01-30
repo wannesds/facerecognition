@@ -2,14 +2,14 @@ import React from 'react';
 import './Rank.scss';
 
 
- const Rank = () => {
+ const Rank = ({name, entries}) => {
      return(
         <div className="rank-box">
             <div className="rank-text">
-                {'Wannes, your current rank is...'}
+                {`${name}, your current entry count is...`}
             </div>
             <div className="rank-num">
-                {'#5'}
+                {entries}
             </div>
         </div>
      );
