@@ -62,7 +62,7 @@ export const particles = {
           "right": "out",
           "top": "out"
         },
-        "speed": 5
+        "speed": 2
       },
       "number": {
         "density": {
@@ -105,11 +105,11 @@ export const particles = {
         "random": {
           "enable": true
         },
-        "value": 5,
+        "value": 4,
         "animation": {
           "enable": true,
           "minimumValue": 0.1,
-          "speed": 20
+          "speed": 2
         }
       },
       "stroke": {

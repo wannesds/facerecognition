@@ -3,6 +3,7 @@ import './Rank.scss';
 
 
  const Rank = ({name, entries}) => {
+     
      return(
         <div className="rank-box">
             <div className="rank-text">
