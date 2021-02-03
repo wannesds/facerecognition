@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './App.scss';
 
-import Clarifai from 'clarifai';
 import Particles from 'react-tsparticles';
 
 import Navigation from '../components/Navigation/Navigation';
@@ -14,10 +13,6 @@ import Register from '../components/Register/Register';
 import { particles } from '../Particles';
 
 function App() {
-
-  const app = new Clarifai.App({
-      apiKey : 'c0b90294f2fa4311ab006f4d3930c7c8'
-    });
 
   const initState = {
     input : '',
@@ -68,12 +63,12 @@ function App() {
     });
   }
 
-  const calculateFaceLocation = (data) => {
-    const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
+  const calculateFaceLocation = (response) => {
+    const clarifaiFace = response.data.outputs[0].data.regions[0].region_info.bounding_box;
     const image = document.getElementById('inputimage');
     const width = Number(image.width);
     const height = Number(image.height);
-    console.log(data.outputs[0].data.regions[0].region_info.bounding_box.bottom_row);  
+    //console.log(data.outputs[0].data.regions[0].region_info.bounding_box.bottom_row);  
 
     return {
       leftCol: clarifaiFace.left_col * width ,
@@ -94,10 +89,15 @@ function App() {
 
   const onBtnSubmit = () => {
     setImageUrl(input);
-    app.models
-      .predict(Clarifai.FACE_DETECT_MODEL, input)
+      fetch('http://localhost:3000/imageurl', {
+        method: 'post',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ input: input })
+      })
+      .then(response => response.json())
       .then(response => {
         if(response) {
+          console.log(response);
           fetch('http://localhost:3000/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
@@ -108,7 +108,7 @@ function App() {
               setUser(user => ({
                 ...user,
                 entries: count
-              }));
+              }))
             })
             .catch(err => console.log(err));
 
