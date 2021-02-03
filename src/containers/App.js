@@ -4,14 +4,14 @@ import './App.scss';
 import Clarifai from 'clarifai';
 import Particles from 'react-tsparticles';
 
-import Navigation from './components/Navigation/Navigation';
-import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
-import Rank from './components/Rank/Rank';
-import FaceRecognition from './components/FaceRecognition/FaceRecognition';
-import Signin from './components/Signin/Signin';
-import Register from './components/Register/Register';
+import Navigation from '../components/Navigation/Navigation';
+import ImageLinkForm from '../components/ImageLinkForm/ImageLinkForm';
+import Rank from '../components/Rank/Rank';
+import FaceRecognition from '../components/FaceRecognition/FaceRecognition';
+import Signin from '../components/Signin/Signin';
+import Register from '../components/Register/Register';
 
-import { particles } from './Particles';
+import { particles } from '../Particles';
 
 function App() {
 
@@ -19,18 +19,27 @@ function App() {
       apiKey : 'c0b90294f2fa4311ab006f4d3930c7c8'
     });
 
-  const [input, setInput] = useState('');
-  const [imageUrl, setImageUrl] = useState('');
-  const [box, setBox] = useState({});
-  const [route, setRoute] = useState('signin');
-  const [isSignedIn, setIsSignedIn] = useState(false);
-  const [user, setUser] = useState({
-    id: '',
-    name: '',
-    email: '',
-    entries: 0,
-    joined: ''
-  });
+  const initState = {
+    input : '',
+    imageUrl : '',
+    box : {},
+    route : 'signin',
+    isSignedIn: false,
+    user : {
+      id: '',
+      name: '',
+      email: '',
+      entries: 0,
+      joined: ''
+    }
+  };
+
+  const [input, setInput] = useState(initState.input);
+  const [imageUrl, setImageUrl] = useState(initState.imageUrl);
+  const [box, setBox] = useState(initState.box);
+  const [route, setRoute] = useState(initState.route);
+  const [isSignedIn, setIsSignedIn] = useState(initState.isSignedIn);
+  const [user, setUser] = useState(initState.user);
 
   //const [data, setData] = useState({});
 
@@ -101,6 +110,8 @@ function App() {
                 entries: count
               }));
             })
+            .catch(err => console.log(err));
+
         }
         displayFaceBox(calculateFaceLocation(response))
       })
@@ -112,7 +123,8 @@ function App() {
     setRoute(route);
 
     if(route === 'signout') {
-      setIsSignedIn(false);
+      setIsSignedIn(initState.isSignedIn);
+      setImageUrl(initState.imageUrl);
     } else if(route === 'home') {
       setIsSignedIn(true);
     }

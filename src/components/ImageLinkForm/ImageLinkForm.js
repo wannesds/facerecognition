@@ -1,8 +1,7 @@
 import React from 'react';
 import './ImageLinkForm.scss';
 
-function ImageLinkForm({ onInputChange, onBtnSubmit }) {
-    
+const ImageLinkForm = ({ onInputChange, onBtnSubmit }) => {
 
      return(
         <div className="form-box">
