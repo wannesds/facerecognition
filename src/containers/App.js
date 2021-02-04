@@ -64,7 +64,7 @@ function App() {
   }
 
   const calculateFaceLocation = (response) => {
-    const clarifaiFace = response.data.outputs[0].data.regions[0].region_info.bounding_box;
+    const clarifaiFace = response.outputs[0].data.regions[0].region_info.bounding_box;
     const image = document.getElementById('inputimage');
     const width = Number(image.width);
     const height = Number(image.height);
@@ -90,7 +90,7 @@ function App() {
   const onBtnSubmit = () => {
     setImageUrl(input);
       fetch('http://localhost:3000/imageurl', {
-        method: 'post',
+        method: 'put',  
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({ input: input })
       })
