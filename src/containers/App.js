@@ -89,7 +89,7 @@ function App() {
 
   const onBtnSubmit = () => {
     setImageUrl(input);
-      fetch('http://localhost:3000/imageurl', {
+      fetch('https://git.heroku.com/frozen-shore-44702.git/imageurl', {
         method: 'put',  
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({ input: input })
@@ -98,7 +98,7 @@ function App() {
       .then(response => {
         if(response) {
           console.log(response);
-          fetch('http://localhost:3000/image', {
+          fetch('https://git.heroku.com/frozen-shore-44702.git/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({ id: user.id })

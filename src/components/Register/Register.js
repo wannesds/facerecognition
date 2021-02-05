@@ -21,7 +21,7 @@ function Register({onRouteChange, loadUser}) {
     }
 
     const onSubmitReg = () =>{
-        fetch('http://localhost:3000/register', {
+        fetch('https://git.heroku.com/frozen-shore-44702.git/register', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
