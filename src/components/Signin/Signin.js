@@ -18,10 +18,10 @@ function Signin({onRouteChange, loadUser}) {
     const onSubmitSignIn = () => {
         fetch('https://git.heroku.com/frozen-shore-44702.git/signin', {
             method: 'post',
-            mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*'
+                'Access-Control-Allow-Origin': '*',
+                'mode': 'no-cors'
             },
             body: JSON.stringify({
                 email: signInEmail,
