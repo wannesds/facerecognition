@@ -90,11 +90,11 @@ function App() {
   const onBtnSubmit = () => {
     setImageUrl(input);
       fetch('https://git.heroku.com/frozen-shore-44702.git/imageurl', {
-        method: 'put', 
+        method: 'post', 
+        mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',
           'Access-Control-Allow-Origin': '*',
-          'mode': 'no-cors',
         },
         body: JSON.stringify({ input: input })
       })
@@ -103,11 +103,11 @@ function App() {
         if(response) {
           console.log(response);
           fetch('https://git.heroku.com/frozen-shore-44702.git/image', {
-            method: 'put',
+            method: 'post',
+            mode: 'no-cors',
             headers: {
               'Content-Type': 'application/json',
-              'Access-Control-Allow-Origin': '*',
-              'method': 'no-cors'
+              'Access-Control-Allow-Origin': '*'
             },
             body: JSON.stringify({ id: user.id })
           })
