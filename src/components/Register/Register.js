@@ -41,7 +41,8 @@ function Register({onRouteChange, loadUser}) {
                 loadUser(user);
                 onRouteChange('home');
             }
-        })   
+        })  
+        .catch(err => {console.log("unable to register", err)}) 
     }
 
 
