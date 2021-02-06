@@ -23,7 +23,7 @@ function Register({onRouteChange, loadUser}) {
     const onSubmitReg = () => {
         fetch('https://frozen-shore-44702.herokuapp.com/register', {
             method: 'put',
-            mode: 'cors',
+            //mode: 'cors',
             headers: {
                 'Content-Type': 'application/json',
             },
