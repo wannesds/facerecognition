@@ -21,13 +21,11 @@ function Register({onRouteChange, loadUser}) {
     }
 
     const onSubmitReg = () => {
-        fetch('https://git.heroku.com/frozen-shore-44702.git/register', {
-            method: 'post',
-            mode: 'no-cors',
+        fetch('https://frozen-shore-44702.herokuapp.com/register', {
+            method: 'put',
             headers: {
-                //'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': 'https://git.heroku.com/frozen-shore-44702.git',
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                //'Access-Control-Allow-Origin': 'https://wannesds.github.io/facerecognition/',
             },
             body: JSON.stringify({
                 email: regEmail,
