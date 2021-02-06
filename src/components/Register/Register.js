@@ -26,7 +26,6 @@ function Register({onRouteChange, loadUser}) {
             mode: 'cors',
             headers: {
                 'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': 'https://frozen-shore-44702.herokuapp.com/',
             },
             body: JSON.stringify({
                 email: regEmail,
