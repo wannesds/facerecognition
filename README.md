@@ -1,7 +1,9 @@
 
 
 # facerecognition
-[Live Demo](https://wannesds.github.io/facerecognition/)
-A simple face recognition app with count score and user reg/sign while following the course "ZTM Web developer"
 
-working with repo [facerecognition-api](https://github.com/wannesds/facerecognition-api)
+[Live Demo](https://wannesds.github.io/facerecognition/)
+
+Face recognition app with count score and user reg/sign while following the course "ZTM Web developer".
+
+working with [back-end repo](https://github.com/wannesds/facerecognition-api) hosted on Heroku.
