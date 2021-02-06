@@ -26,7 +26,7 @@ function Register({onRouteChange, loadUser}) {
             credentials: 'same-origin',
             headers: {
                 'Content-Type': 'application/json',
-                //'Access-Control-Allow-Origin': 'https://wannesds.github.io/facerecognition/',
+                'Access-Control-Allow-Origin': 'https://wannesds.github.io/facerecognition/',
             },
             body: JSON.stringify({
                 email: regEmail,
