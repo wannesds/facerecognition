@@ -23,8 +23,7 @@ function Register({onRouteChange, loadUser}) {
     const onSubmitReg = () => {
         fetch('https://frozen-shore-44702.herokuapp.com/register', {
             method: 'put',
-            mode: 'same-origin',
-            credentials: 'same-origin',
+            mode: 'cors',
             headers: {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': 'https://wannesds.github.io/facerecognition/',
