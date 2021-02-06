@@ -23,10 +23,11 @@ function Register({onRouteChange, loadUser}) {
     const onSubmitReg = () => {
         fetch('https://git.heroku.com/frozen-shore-44702.git/register', {
             method: 'post',
-            mode: 'no-cors',
+            
             headers: {
                 'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*'
+                'Access-Control-Allow-Origin': '*',
+                'Connection': 'application/x-www-form-urlencoded'
             },
             body: JSON.stringify({
                 email: regEmail,
