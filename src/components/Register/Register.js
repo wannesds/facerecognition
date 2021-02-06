@@ -23,6 +23,7 @@ function Register({onRouteChange, loadUser}) {
     const onSubmitReg = () => {
         fetch('https://frozen-shore-44702.herokuapp.com/register', {
             method: 'put',
+            mode: 'same-origin',
             credentials: 'same-origin',
             headers: {
                 'Content-Type': 'application/json',
